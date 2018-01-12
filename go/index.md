@@ -148,16 +148,18 @@ function update_connected() {
     });
 }
 
+var primes_data = {};
+
 
 function workload(recurse) {
     var maxprime = document.getElementById("largest_prime");   
     var curblock = document.getElementById("current_range");
 
-    database.ref('primes').once('value').then(function (val) {
-        
+    //database.ref('primes').once('value').then(function (val) {
+    database.ref("primes/").orderByKey().limitToLast(2).once("value").then(function (val) {
         var prime = 0;
         for (key in val.val()) {
-            if (parseInt(key) >= prime) {
+            if (!isNaN(key) && parseInt(key) >= prime) {
                 prime = parseInt(key) + workload_size;
             }
         }
