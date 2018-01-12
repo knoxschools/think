@@ -76,7 +76,7 @@ background-color
     </h2>
 
     <h1 id="largest_prime">
-    399999
+    ...
     </h1>
 
     <br/>
@@ -85,7 +85,7 @@ background-color
     Testing Range:
     </h2>
     <h1 id="current_range">
-    100000-3241234
+    ...
     </h1>
 
     <br/>
@@ -94,7 +94,7 @@ background-color
     Users Connected:
     </h2>
     <h1 id="users_connected">
-    324
+    0
     </h1>
 
 
