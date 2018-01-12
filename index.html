@@ -5,6 +5,12 @@ class: 'home-template'
 navigation: True
 ---
 
+<style>
+
+</style>
+
+
+
 <!-- < default -->
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
@@ -15,7 +21,9 @@ into the {body} of the default.hbs template -->
         <div class="site-header-content">
             <h1 class="site-title">
                 {% if site.logo %}
-                    <img class="site-logo" src="{{ site.myurl }}{{ site.logo }}" alt="{{ site.title }}"/>
+                <img class="site-logo t_image" style="position: relative; left: 2.1em; top: -.35em;" src="{{ site.myurl }}assets/images/t_circle.png" alt="{{ site.title }}"/>
+                <img class="site-logo" style="position: relative;" src="{{ site.myurl }}assets/images/hink_image.png" alt="{{ site.title }}"/>
+                <!--<img class="site-logo" src="{{ site.myurl }}{{ site.logo }}" alt="{{ site.title }}"/>-->
                 {% else %}
                     {{ site.title }}
                 {% endif %}
