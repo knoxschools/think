@@ -38,10 +38,10 @@ body {
     }
 
     h1 {
-        font-size: 4.3em;
+        font-size: 4.0em;
     }
     h2 {
-        font-size: 3.8em;
+        font-size: 3.4em;
     }
 
 }
@@ -162,7 +162,7 @@ function workload(recurse) {
             }
         }
 
-        curblock.innerHTML = prime + "-" + (prime + workload_size - 1);
+        curblock.innerHTML = prime.toLocaleString() + " to " + (prime + workload_size - 1).toLocaleString();
 
         database.ref('primes/').child(prime).set(["to come"]);
 
@@ -173,7 +173,7 @@ function workload(recurse) {
             if (is_prime(i)) {
                 if (i > my_largest_prime) {
                     my_largest_prime = i;
-                    maxprime.innerHTML = "" + my_largest_prime;
+                    maxprime.innerHTML = "" + my_largest_prime.toLocaleString();
                 }
                 res_ct += 1;
             }
