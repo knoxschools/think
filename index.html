@@ -16,14 +16,33 @@ navigation: True
 into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
+<header class="site-header outer" style="background-color: #aaa;">
+    
+    <!--
 <header class="site-header outer {% if page.cover or site.cover %}" style="background-image:  url({{ site.myurl }}{% if page.cover %}{{ page.cover }}{% elsif site.cover %}{{ site.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+    -->
+    
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title">
                 {% if site.logo %}
-                <img class="site-logo t_image" style="position: relative; left: 2.1em; top: -.35em;" src="{{ site.myurl }}assets/images/t_circle.png" alt="{{ site.title }}"/>
-                <img class="site-logo" style="position: relative;" src="{{ site.myurl }}assets/images/hink_image.png" alt="{{ site.title }}"/>
+                <div id="example" style="display: flex; flex-wrap: nowrap;">
+                    <!--
+    <span id="A"><img src="http://placehold.it/350x150" /></span>
+    <span id="B"><img src="http://placehold.it/350x150" /></span>
+    <span id="C"><img src="http://placehold.it/350x150" /></span>
+    -->
+
+
+                <span id="A"><img class="site-logo t_image" style="position: relative; margin-right: 0.5em; top: -.35em; vertical-align: middle;" src="{{ site.myurl }}assets/images/t_circle.png" alt="{{ site.title }}"/>
+                </span>
+                <span id="B"><img class="site-logo" style="align-self: center; justify-self: center;position: relative; vertical-align: middle;" src="{{ site.myurl }}assets/images/hink_image.png" alt="{{ site.title }}"/>
+                </span>
+                
                 <!--<img class="site-logo" src="{{ site.myurl }}{{ site.logo }}" alt="{{ site.title }}"/>-->
+                
+                </div>
+                
                 {% else %}
                     {{ site.title }}
                 {% endif %}
