@@ -125,7 +125,7 @@ var my_largest_prime = -1;
 
 
 function init() {
-    setInterval(update_connected, 1000 * .25);
+    setInterval(update_connected, 1000 * 1.0);
 }
 
 init();
