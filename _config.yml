@@ -6,6 +6,8 @@ language: 'en-uk'
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: '/'
+myurl: '/'
+
 
 # Website info
 title: "Th!nk"

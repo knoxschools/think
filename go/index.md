@@ -18,7 +18,7 @@ subclass: 'post page'
 
 @font-face {
   font-family: 'UbuntuMono';
-  src: url('{{site.baseurl}}assets/UbuntuMono.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('{{site.myurl}}assets/UbuntuMono.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 body {
@@ -67,7 +67,7 @@ background-color
 
 <div style="text-align: center;">
     <!--<h1>Th!nk</h1>-->
-    <a href="{{site.baseurl}}"><img class="mymobile" src="{{site.baseurl}}assets/images/blog-icon.png"></a>
+    <a href="{{site.myurl}}"><img class="mymobile" src="{{site.myurl}}assets/images/blog-icon.png"></a>
 
     <br/>
 
