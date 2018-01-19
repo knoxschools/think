@@ -16,5 +16,5 @@ In [our example program, finding primes]({{site.myurl}}go), people work together
 
 Essentially, participants receive Th!nk coin as proof they worked on a scientific problem. They can then send that to other Th!nk users in exchange for goods or services. But, the main object of Th!nk is to further scientific research, and in order to achieve that goal better, a currency based on proof-of-work is used to incentivize people to contribute to science.
 
-**Researchers submit their projects to Th!nk on the blockchain, and users choose which one they want**
+**Researchers submit their projects to Th!nk on the blockchain, and users choose which one they want, then run the program**
 
