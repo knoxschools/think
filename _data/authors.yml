@@ -5,7 +5,7 @@ ghost:
   url: myJekyll.github.io/jasper2
   bio: The professional publishing platform
   picture: assets/images/ghost.png
-  facebook: ghost
+  facebook: False
   twitter: tryghost
   cover: False
 hannah:
