@@ -130,7 +130,7 @@ function init() {
 
 init();
 
-function update_connected(){connected_ref.once("value").then(function(e){var n=new Date,t=0;for(key in e.val())person=e.val()[key],Math.abs(n.getTime()-person.timestamp)<=7200?t+=1:connected_ref.child(key).remove();my_ref.child("timestamp").set(n.getTime()),document.getElementById("users_connected").innerHTML=t+1})}
+function update_connected(){connected_ref.once("value").then(function(e){var n=new Date,t=0;for(key in e.val())person=e.val()[key],Math.abs(n.getTime()-person.timestamp)<=7200?t+=1:connected_ref.child(key).remove();my_ref.child("timestamp").set(n.getTime()),document.getElementById("users_connected").innerHTML=t})}
 
 var primes_data = {};
 
