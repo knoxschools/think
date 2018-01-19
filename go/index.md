@@ -125,69 +125,17 @@ var my_largest_prime = -1;
 
 
 function init() {
-    setInterval(update_connected, 1000 * 1.0);
+    setInterval(update_connected, 1000 * 0.5);
 }
 
 init();
 
-function update_connected() {
-    connected_ref.once('value').then(function (val) {
-        var cdate = new Date();
-        var ct = 0;
-        for (key in val.val()) {
-            person = val.val()[key];
-            if (Math.abs(cdate.getTime() - person.timestamp) <= 7.2 * 1000) {
-                ct += 1;
-            } else {
-                connected_ref.child(key).remove();
-            }
-        }
-        my_ref.child("timestamp").set(cdate.getTime());
-
-        document.getElementById("users_connected").innerHTML = ct;
-    });
-}
+function update_connected(){connected_ref.once("value").then(function(e){var n=new Date,t=0;for(key in e.val())person=e.val()[key],Math.abs(n.getTime()-person.timestamp)<=7200?t+=1:connected_ref.child(key).remove();my_ref.child("timestamp").set(n.getTime()),document.getElementById("users_connected").innerHTML=t+1})}
 
 var primes_data = {};
 
 
-function workload(recurse) {
-    var maxprime = document.getElementById("largest_prime");   
-    var curblock = document.getElementById("current_range");
-
-    //database.ref('primes').once('value').then(function (val) {
-    database.ref("primes/").orderByKey().limitToLast(2).once("value").then(function (val) {
-        var prime = 0;
-        for (key in val.val()) {
-            if (!isNaN(key) && parseInt(key) >= prime) {
-                prime = parseInt(key) + workload_size;
-            }
-        }
-
-        curblock.innerHTML = prime.toLocaleString() + " to " + (prime + workload_size - 1).toLocaleString();
-
-        database.ref('primes/').child(prime).set(["to come"]);
-
-        var i;
-        var res_ct = 0;
-
-        for (i = prime; i < prime + workload_size; i++) {
-            if (is_prime(i)) {
-                if (i > my_largest_prime) {
-                    my_largest_prime = i;
-                    maxprime.innerHTML = "" + my_largest_prime.toLocaleString();
-                }
-                res_ct += 1;
-            }
-        }
-        database.ref('primes/').child(prime).set(res_ct);
-
-        if (recurse) {
-            setTimeout(function() {workload(true)}, 600);
-        }
-    });
-}
-
+function workload(e){var r=document.getElementById("largest_prime"),t=document.getElementById("current_range");database.ref("primes/").orderByKey().limitToLast(2).once("value").then(function(a){var o,i=0;for(key in a.val())!isNaN(key)&&parseInt(key)>=i&&(i=parseInt(key)+workload_size);t.innerHTML=i.toLocaleString()+" to "+(i+workload_size-1).toLocaleString(),database.ref("primes/").child(i).set(["to come"]);var n=0;for(o=i;o<i+workload_size;o++)is_prime(o)&&(o>my_largest_prime&&(my_largest_prime=o,r.innerHTML=""+my_largest_prime.toLocaleString()),n+=1);database.ref("primes/").child(i).set(n),e&&setTimeout(function(){workload(!0)},600)})}
 
 function is_prime(x) {
     var y;
