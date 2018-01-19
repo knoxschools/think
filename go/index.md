@@ -22,7 +22,7 @@ subclass: 'post page'
 }
 
 body {
-    background-color: #888;
+    background-color: #ef002a;
     font-family: 'UbuntuMono', Fallback, sans-serif;
     margin: 3em;
     
