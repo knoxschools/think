@@ -14,8 +14,8 @@ title: "Th!nk"
 description: A Way To Progress Science Research
 cover: assets/images/blog-cover_single.jpg
 logo: assets/images/blog-icon.png
-logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
+logo_dark: assets/images/t_circle.png
+favicon: assets/images/t_circle.png
 production_url: https://think.knoxschools.us/
 source_url: https://github.com/knoxschools/think
 
