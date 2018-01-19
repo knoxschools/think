@@ -1,4 +1,21 @@
 
 <script>
 var workload_size = 10000;
+
+var nicknames = [
+    "Adamsville","Alamo","Alexandria","Altamont","Arlington","Ashland City","Atwood","Auburntown","Baileyton","Baxter","Beersheba Springs","Bell Buckle","Benton","Bethel Springs","Big Sandy","Blaine","Braden","Bradford","Brighton","Bruceton","Bulls Gap","Burlison","Burns","Byrdstown","Calhoun","Carthage","Caryville","Centertown","Centerville","Chapel Hill","Charlotte","Clarksburg","Collierville","Coopertown","Cornersville","Cottage Grove","Cumberland City","Cumberland Gap","Dandridge","Decatur","Decaturville","Dowelltown","Doyle","Dresden","Eastview","Englewood","Enville","Erwin","Estill Springs","Ethridge","Farragut","Gadsden","Gainesboro","Garland","Gates","Gibson","Gleason","Gordonsville","Graysville","Greenbrier","Greeneville","Guys","Halls","Hartsville","Henning","Henry","Hickory Valley","Hollow Rock","Hornbeak","Hornsby","Huntingdon","Huntland","Huntsville","Jacksboro","Jasper","Jonesborough","Kenton","Kimball","Kingston Springs","La Grange","Liberty","Linden","Livingston","Lookout Mountain","Loudon","Louisville","Lynnville","Mason","Maury City","McLemoresville","Michie","Milledgeville","Monteagle","Monterey","Morrison","Mosheim","Mount Carmel","Mountain City","New Market","New Tazewell","Newbern","Nolensville","Normandy","Oakdale","Oakland","Obion","Oliver Springs","Oneida","Orme","Palmer","Parrottsville","Pegram","Petersburg","Pittman Center","Pleasant Hill","Powells Crossroads","Ridgely","Rives","Rogersville","Rossville","Rutherford","Rutledge","Saltillo","Sardis","Saulsbury","Scotts Hill","Selmer","Sharon","Signal Mountain","Silerton","Slayden","Smyrna","Sneedville","Somerville","South Carthage","Spencer","Spring City","Stanton","Stantonville","Surgoinsville","Tazewell","Tellico Plains","Tennessee Ridge","Thompson's Station","Tiptonville","Toone","Tracy City","Trezevant","Trimble","Troy","Unicoi","Vanleer","Viola","Vonore","Walden","Wartrace","Watertown","Westmoreland","White Bluff","White Pine","Winfield","Woodbury"
+]
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+}
+
+shuffle(nicknames);
+
+
 </script>
